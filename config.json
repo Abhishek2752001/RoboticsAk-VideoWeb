@@ -1,0 +1,23 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_uri": "mysql://root:@127.0.0.1/robotic",
+    "prod_uri":"mysql://root:@127.0.0.1/robotic",
+    "goggle_url":"https://google.com",
+    "gh_url": "https://github.com",
+    "youtube_url": "https://www.youtube.com/channel/UCllkjNq12AbrGvNPh9qsvcA",
+    "blog_name": "Robotics Ak",
+    "blog_side": "Video Catalog ",
+    "tag_line": "This is all about learning videos",
+    "gmail-user":"=======================",
+    "gmail-password":"----------------",
+    "contact_text": "You can send me i will definetly response you within a hrs",
+    "no_of_videos":6,
+    "login_image": "login.svg",
+    "admin_user":"Abhi",
+    "admin_password":"Abhi1234",
+    "upload_location":"C:\\Users\\HP\\PycharmProject\\videoeweb\\static\\video"
+
+  }
+}

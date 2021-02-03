@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+
+
+			<div class="tm-welcome-container tm-fixed-header tm-fixed-header-2">
+				<div class="text-center">
+					<p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 mt-lg-0 mt-5 text-blue mx-auto">This is all about me</p>                	
+				</div>                
+            </div>
+
+            <div id="tm-fixed-header-bg"></div> <!-- Header image -->
+		</div>
+
+		<!-- Page content -->
+		<main>
+			<div class="container-fluid px-0">
+				<div class="mx-auto tm-content-container">					
+					<div class="row mt-3 mb-5 pb-3">
+						<div class="col-12">
+							<div class="mx-auto tm-about-text-container px-3">
+								<h2 class="tm-page-title mb-4 tm-text-primary">About Me</h2>
+								<p class="mb-4"> My name is <b>Abhishek Ashok Kadam</b> and I want to thank you for visiting my About page. Since 2020-21, I have successfully created and launched my first <b>E-learning website.</b>this website help to learn many thing about <b><i>programming, robotics, and somthing about the electronics and telicommunication and more .</i></b> I can teach you step-by-step how to do exactly the same thing. But first, I am sure you would like to hear my story,I will make it brief.</p>
+									
+							</div>							
+						</div>						
+					</div>					
+				</div>
+
+				
+
+				<div class="parallax-window" data-parallax="scroll" data-image-src="{{ url_for('static',filename='img/about-3.jpg') }}"></div>
+			</div>
+		</main>
+
+		<div class="container-fluid tm-content-container mx-auto pt-5">
+			
+{% endblock %}

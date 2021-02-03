@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+{% block body %}
+
+			<div class="tm-welcome-container tm-fixed-header tm-fixed-header-1">
+				<div class="text-center">
+					<p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 text-white mx-auto">Video Pannel.</p>                	
+				</div>                
+            </div>
+
+			<!-- Header image -->
+            <div id="tm-fixed-header-bg"></div> 
+		</div>
+<hr>
+		<!-- Page content -->
+		<div class="container-fluid">
+			<div class="mx-auto tm-content-container">
+				<main>
+					<div class="row mb-5 pb-4">
+						<div class="col-12">
+							<!-- Video player 1422x800 -->
+							{% set fname='video/' + video.video_file %}
+							<video width="800" height="800" controls autoplay>
+							   <source src="{{ url_for('static',filename=fname) }}" type="video/mp4">						  
+							Your browser does not support the video tag.
+							</video>
+						</div>
+					</div>
+					<hr>
+					<div class="row mb-5 pb-5">
+						<div class="col-xl-8 col-lg-7">
+							<!-- Video description -->
+							<div class="tm-video-description-box">
+								<h2 class="mb-5 tm-video-title">{{video.title}}</h2>
+								<p class="mb-4">{{video.content}}</p>
+								
+							</div>							
+						</div>
+						<hr>
+						<div class="col-xl-4 col-lg-5">
+							<!-- Share box -->
+							<div class="tm-bg-gray tm-share-box">
+								<h6 class="tm-share-box-title mb-4">Share this video</h6>
+								<div class="mb-5 d-flex">
+									<a href="https://www.facebook.com" class="tm-bg-white tm-share-button"><i class="fab fa-facebook"></i></a>
+									<a href=https://www.twitter.com class="tm-bg-white tm-share-button"><i class="fab fa-twitter"></i></a>
+									<a href="https://www.pinterest.com" class="tm-bg-white tm-share-button"><i class="fab fa-pinterest"></i></a>
+									<a href="https://www.gmail.com" class="tm-bg-white tm-share-button"><i class="far fa-envelope"></i></a>
+								</div>
+								<p class="mb-4">Author: <a href="Roboticsak.com" class="tm-text-link">Robotics Ak</a></p>
+								<a href="#" class="tm-bg-white px-5 mb-4 d-inline-block tm-text-primary tm-likes-box tm-liked">
+									<i class="fas fa-heart mr-3 tm-liked-icon"></i>
+									<i class="far fa-heart mr-3 tm-not-liked-icon"></i>
+									<span id="tm-likes-count">486 likes</span>
+								</a>
+								<div>
+									<button class="btn btn-primary p-0 tm-btn-animate tm-btn-download tm-icon-download"><span>Download Video</span></button>	
+								</div>		
+								<hr>						
+							</div>
+						</div>
+					</div>
+
+
+
+  
+
+<hr>
+
+  <section class="jumbotron text-center">
+        <h1 class="jumbotron-heading"><span id="typed"></span></h1>
+    
+</section>
+
+<script src="{{ url_for('static',filename='js/typed.min.js') }}" async defer></script>
+<script>
+    window.onload = function () {
+        console.log("loaded")
+        var typed = new Typed('#typed', {
+            strings: ["Welcome to Robotics ak", "Learn Python", "Web development", "Data Science", "Machine Learning", "and other awesome programming concepts with me :)"],
+            backSpeed: 15,
+            smartBackspace: true,
+            backDelay: 1200,
+            startDelay: 1000,
+            typeSpeed: 25,
+            loop: true,
+        });
+    };
+</script>
+				
+				</main>
+				<hr>
+{% endblock %}
+				

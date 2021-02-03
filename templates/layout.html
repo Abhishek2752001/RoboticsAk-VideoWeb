@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Catalog</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='fontawesome/css/all.min.css') }}"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/templatemo-video-catalog.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/prism.css') }}">
+
+
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60726752-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-60726752-3');
+  </script>
+
+  <!-- Google Ads Auto -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-9655830461045889",
+      enable_page_level_ads: true
+    });
+  </script>
+
+  <style>
+    .alert-heading {
+        color: inherit;
+        display: flex;
+        justify-content: center;
+        font-size: 56px;
+        font-weight: bold;
+    }
+
+    .alert-success {
+        color: #ff0d0d;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+        display: flex;
+        flex-direction: column;
+        font-size: 121px;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .gmap_canvas {
+        overflow: hidden;
+        background: none!important;
+        height: 494px;
+        width: 100%;
+        border-radius: 31%;
+    }
+  </style>
+</head>
+<!--
+
+TemplateMo 552 Video Catalog
+
+https://templatemo.com/tm-552-video-catalog
+
+-->
+<body>
+	<div class="tm-page-wrap mx-auto">
+		<div class="position-relative">
+			<div class="potition-absolute tm-site-header">
+				<div class="container-fluid position-relative">
+					<div class="row">						
+                        <div class="col-7 col-md-4">
+                            <a href="/" class="tm-bg-black text-center tm-logo-container">
+                                <i class="fas fa-video tm-site-logo mb-3"></i>
+                                <h1 class="tm-site-name">{{ params['blog_side'] }}</h1>
+                            </a>
+                        </div>
+                        <div class="col-5 col-md-8 ml-auto mr-0">
+                            <div class="tm-site-nav">
+                                <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
+                                    <button class="navbar-toggler tm-bg-black py-2 px-3 mr-0 ml-auto collapsed" type="button"
+                                        data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span>
+                                            <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                            <i class="fas fa-times tm-menu-opened-icon"></i>
+                                        </span>
+                                    </button>
+                                    <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                        <ul class="navbar-nav text-uppercase">
+                                            <li class="nav-item">
+                                                <a class="nav-link tm-nav-link" href="/">Videos</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link tm-nav-link" href="/about">About</a>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <a class="nav-link tm-nav-link" href="/contact">Contact <span class="sr-only">(current)</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+
+{% block body %}  {% endblock %}       
+            </div> <!-- row -->
+
+            <footer class="row pt-5">
+                <div class="col-12">
+                    <p class="text-right">copyright &copy; www.RoboticsAk.com. All right reserved               
+                        - Designed by <a href="https://www.youtube.com/channel/UCllkjNq12AbrGvNPh9qsvcA" rel="nofollow" target="blank">Robotics Ak</a>
+                    </p>
+                </div>
+            </footer>
+        </div>      
+    </div>
+
+    <script src="{{ url_for('static',filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/parallax.min.js') }}"></script>    
+     <script>
+        $(document).ready(function() {
+            $('.tm-likes-box').click(function(e) {
+                e.preventDefault();
+                $(this).toggleClass('tm-liked');
+
+                if($(this).hasClass('tm-liked')) {
+                    $('#tm-likes-count').html('486 likes');
+                } else {
+                    $('#tm-likes-count').html('485 likes');
+                }
+            });
+        });
+    </script>
+</body>
+</html>            

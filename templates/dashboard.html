@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+			<div class="tm-welcome-container tm-fixed-header tm-fixed-header-2">
+				<div class="text-center">
+					<h1 class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 mt-lg-0 mt-5 text-white mx-auto">Admin pannel</h1>                	
+				</div>                
+            </div>
+
+            <div id="tm-fixed-header-bg"></div> <!-- Header image -->
+		</div>
+		<hr>
+ <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <h1>Basic Actions</h1>
+          
+           <a href="/edit/0">  <button class="btn btn-primary"> Add a new post</button></a>
+           <a href="/logout">  <button class="btn btn-primary"> Logout</button></a>
+          <hr>
+          <h1>Upload A File</h1>
+          
+            <form action="/uploader" method="post" enctype="multipart/form-data">
+              
+             <input type="file" name="file">
+             <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+          <hr>
+          
+
+<h1>Edit Posts</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Sno</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Edit</th>       
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+
+
+{% for video in videos %}
+      <tr>
+        <td>{{video.sno}}</td>
+        <td>{{video.title}}</td>
+        <td>{{video.date}}</td>
+        <td><a href="/edit/{{video.sno}}"><button class="btn btn-primary">Edit</button></a></td>     <!--how to make button -->
+        <td><a href="/delete/{{video.sno}}"><button class="btn btn-primary">Delete</button></a></td> 
+        
+      </tr>
+   {% endfor %}
+
+
+
+    </tbody>
+  </table>
+  <hr>
+</div>
+
+</body>
+		<hr>
+
+			
+{% endblock %}

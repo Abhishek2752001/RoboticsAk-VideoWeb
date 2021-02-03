@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block body %}
+
+			<div class="tm-welcome-container tm-fixed-header tm-fixed-header-2">
+				<div class="text-center">
+					<h1 class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 mt-lg-0 mt-5 text-white mx-auto">Admin pannel</h1>                	
+				</div>                
+            </div>
+
+            <div id="tm-fixed-header-bg"></div> <!-- Header image -->
+		</div>
+		<hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <h1>Basic Action</h1>
+
+          <a href="/edit/0">  <button class="btn btn-primary"> Add a New Post  </button></a>
+          <!-- <a href="/logout">  <button class="btn btn-primary"> Logout </button></a> -->
+          
+  <!--         <hr>
+
+    <h1>Upload new File</h1>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form> -->
+
+          <hr>
+<h1>Add/Edit Posts</h1>
+
+ <form id="contact-form" action="/edit/{{sno}}" method="post" class="tm-contact-form">
+
+
+                                  <div class="form-group">
+                                    <input type="text" name="title" class="form-control rounded-0" placeholder="Title" id="title" required="" value="{{video.title}}" />
+                                  </div>
+
+
+                                  <div class="form-group">
+                                    <input type="text" name="video_file" class="form-control rounded-0" placeholder="video_file" id="video_file" required="" value="{{video.video_file}}" />
+                                  </div>
+
+
+                                  <div class="form-group">
+                                    <input type="text" name="slug" class="form-control rounded-0" placeholder="slug" id="slug" required="" value="{{video.slug}}" />
+                                  </div>
+
+
+                                    <div class="control-group">
+                                   <div class="form-group floating-label-form-group controls">
+                                   <textarea rows="5" class="form-control" placeholder="Content" name = "content" id="content" required data-validation-required-message="Please enter a message.">{{video.content}}</textarea>
+                                   <p class="help-block text-danger"></p>
+                                  </div>
+                                    </div>
+
+
+                                   <div class="form-group">
+                                    <input type="text" name="fronted_img" class="form-control rounded-0" placeholder="fronted_img" id="fronted_img" required="" value="{{video.fronted_img}}" />
+                                  </div>
+
+
+                                  <div class="form-group mb-0">
+                                    <button type="submit" class="btn btn-primary rounded-0 d-block ml-auto mr-0 tm-btn-animate tm-btn-submit tm-icon-submit"><span>Submit</span></button>
+                                  </div>
+
+                                </form> 
+
+</div>
+</body>
+    <hr>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="{{ url_for('static',filename='img/about-2.jpg') }}"></div>
+
+			
+{% endblock %}
